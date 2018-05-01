@@ -1,44 +1,45 @@
-package com.thoughtworks.tw101.introductory_programming_exercises;
+// package com.thoughtworks.tw101.introductory_programming_exercises;
+
+
 
 public class TriangleExercises {
+    public static void vertical(int n) {
+        int count = n;
+        System.out.print("This is an example of the vertical function printing " + n + " times.\n");
+        while (n > 0) {
+            System.out.println("*");
+            n--;
+        }
+        return;
+    }
+
+    public static void horizontal(int n) {
+        int count = n;
+        while (n > 0) {
+            System.out.print("*");
+            n--;
+        }
+        System.out.print("\n");
+        return;
+    }
+
+    public static void right(int n) {
+        System.out.print("This is an example of the right function printing " + n + " times.\n");
+        for (int i = 1; i < n + 1; i++) {
+            horizontal(i);
+        }
+
+        return;
+    }
+
     public static void main(String[] args) {
-        drawAnAsterisk();
-        drawAHorizontalLine(8);
-        drawAVerticalLine(3);
-        drawARightTriangle(3);
-    }
-
-//    Easiest exercise ever
-//    Print one asterisk to the console.
-//    Example: *
-    private static void drawAnAsterisk() {
-
-    }
-
-//    Draw a horizontal line
-//    Given a number n, print n asterisks on one line.
-//    Example when n=8:  ********
-    private static void drawAHorizontalLine(int n) {
-
-    }
-
-//    Draw a vertical line
-//    Given a number n, print n lines, each with one asterisks
-//    Example when n=3:
-//            *
-//            *
-//            *
-    private static void drawAVerticalLine(int n) {
-
-    }
-
-//    Draw a right triangle
-//    Given a number n, print n lines, each with one more asterisk than the last (i.e. one on the first line, two on the second,etc.)
-//    Example when n=3:
-//            *
-//            **
-//            ***
-    private static void drawARightTriangle(int n) {
-
+        System.out.print("This is the single asterisk print.\n");
+        System.out.println("*\n");
+        vertical(8);
+        System.out.println("\nThis is the horizontal print");
+        horizontal(10);
+        System.out.print("\n");
+        right(3);
+        return;
     }
 }

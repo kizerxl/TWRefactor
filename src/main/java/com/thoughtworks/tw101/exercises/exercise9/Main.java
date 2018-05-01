@@ -1,4 +1,5 @@
-package com.thoughtworks.tw101.exercises.exercise9;
+
+// package com.thoughtworks.tw101.exercises.exercise9;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class Main {
         root.add("Sue-Ellen");
         root.add("Sara");
         root.add("Casey");
+        root.add("Tyrone");
 
         List<String> names = root.names();
 

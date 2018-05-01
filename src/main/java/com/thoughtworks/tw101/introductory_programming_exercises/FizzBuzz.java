@@ -1,4 +1,4 @@
-package com.thoughtworks.tw101.introductory_programming_exercises;
+// package com.thoughtworks.tw101.introductory_programming_exercises;
 
 //FizzBuzz Exercise
 //        FizzBuzz is a simple number game where you count, but say "Fizz" and/or "Buzz" instead of numbers adhering to
@@ -27,11 +27,29 @@ package com.thoughtworks.tw101.introductory_programming_exercises;
 //        FizzBuzz
 
 public class FizzBuzz {
-    public static void main(String[] args) {
-        fizzBuzz();
+    public static void example(int n){
+        System.out.println("This is an example of FizzBuzz up to the number: " + n + ".");
+        for (int i = 1; i < n + 1; i++){
+
+            boolean three = i % 3 == 0;
+            boolean five = i % 5 == 0;
+
+            if (three && five){
+                System.out.println("FizzBuzz");
+            } else if (three){
+                System.out.println("Fizz");
+            } else if (five){
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
+
+        return;
     }
 
-    private static void fizzBuzz() {
-
+    public static void main(String[] args) {
+        example(100);
+        return;
     }
 }

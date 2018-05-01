@@ -1,4 +1,4 @@
-package com.thoughtworks.tw101.exercises.exercise5;
+// package com.thoughtworks.tw101.exercises.exercise5;
 
 public class Rectangle {
     private final int length;
@@ -10,6 +10,10 @@ public class Rectangle {
     }
 
     public int area(){
-        return -1;
+        return this.width * this.length;
+    }
+
+    public static void main(String[] args) {
+        return;
     }
 }

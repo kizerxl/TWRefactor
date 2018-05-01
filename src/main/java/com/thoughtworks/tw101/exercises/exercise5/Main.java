@@ -1,4 +1,4 @@
-package com.thoughtworks.tw101.exercises.exercise5;
+// package com.thoughtworks.tw101.exercises.exercise5;
 
 // Exercise #5: Create an array of 5 Rectangles (each with height and width instance variables and an area() method).
 // Find the average area of the rectangles.
