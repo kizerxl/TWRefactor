@@ -35,17 +35,9 @@ public class DiamondExercises {
         System.out.println("This is the output of the diamond function.");
 
         for (int i = 0; i < 2 * n; i++) {
-            for (int j = 0; j < spaces; j++) {
-                System.out.print(" ");
-            }
-
-            for (int k = 0; k < stars; k++) {
-                System.out.print("*");
-            }
-
-            for (int m = 0; m < spaces; m++) {
-                System.out.print(" ");
-            }
+            printCharacter(" ", spaces);
+            printCharacter("*", stars);
+            printCharacter(" ", spaces);
 
             if (i < n - 1) {
                 spaces -= 1;
@@ -71,17 +63,9 @@ public class DiamondExercises {
                 spaces += 1;
                 stars -= 2;
             } else {
-                for (int j = 0; j < spaces; j++) {
-                    System.out.print(" ");
-                }
-
-                for (int k = 0; k < stars; k++) {
-                    System.out.print("*");
-                }
-
-                for (int m = 0; m < spaces; m++) {
-                    System.out.print(" ");
-                }
+                printCharacter(" ", spaces);
+                printCharacter("*", spaces);
+                printCharacter(" ", spaces);
 
                 if (i < n - 1) {
                     spaces -= 1;
@@ -96,11 +80,16 @@ public class DiamondExercises {
         }
     }
 
+    private void printCharacter(String characterStr, int numOfTimes) {
+        for (int j = 0; j < numOfTimes; j++) {
+            System.out.print(characterStr);
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         isosceles(3);
         System.out.print("\n");
         diamond(3);
         diamond(3, "Tyrone");
-        return;
     }
 }

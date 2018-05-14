@@ -43,27 +43,18 @@ class Number {
             if (num > this.theGuess){
                 System.out.println("Your guess is too high. Guess lower.");
                 this.myGuesses.add(num);
-                return;
             } else if (num < this.theGuess){
                 System.out.println("Your guess is too low. Guess higher.");
                 this.myGuesses.add(num);
-                return;
             } else {
                 this.guessed = true;
                 System.out.println("Congrats you guessed the number " + this.theGuess + ". It took you " + this.numGuesses + " attempts.");
                 System.out.println("Your guesses were: " + this.myGuesses + ".");
-                return;
             }
-        } else {
-            return;
         }
     }
 
     public boolean guessedYet(){
         return this.guessed;
-    }
-
-    public static void main(String[] args) {
-        return;
     }
 }
