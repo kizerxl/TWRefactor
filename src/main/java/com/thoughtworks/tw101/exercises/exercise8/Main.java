@@ -18,6 +18,5 @@ public class Main {
             attempt.aGuess(myGuess);
         } while (!attempt.guessedYet());
 
-        return;
     }
 }

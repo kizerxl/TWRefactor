@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 class Number {
     int low;
@@ -40,17 +39,21 @@ class Number {
             }
 
             this.numGuesses++;
-            if (num > this.theGuess){
-                System.out.println("Your guess is too high. Guess lower.");
-                this.myGuesses.add(num);
-            } else if (num < this.theGuess){
-                System.out.println("Your guess is too low. Guess higher.");
-                this.myGuesses.add(num);
-            } else {
-                this.guessed = true;
-                System.out.println("Congrats you guessed the number " + this.theGuess + ". It took you " + this.numGuesses + " attempts.");
-                System.out.println("Your guesses were: " + this.myGuesses + ".");
-            }
+            printoutUserGuessResponse(num);
+        }
+    }
+
+    private void printoutUserGuessResponse(int num) {
+        if (num > this.theGuess){
+            System.out.println("Your guess is too high. Guess lower.");
+            this.myGuesses.add(num);
+        } else if (num < this.theGuess){
+            System.out.println("Your guess is too low. Guess higher.");
+            this.myGuesses.add(num);
+        } else {
+            this.guessed = true;
+            System.out.println("Congrats you guessed the number " + this.theGuess + ". It took you " + this.numGuesses + " attempts.");
+            System.out.println("Your guesses were: " + this.myGuesses + ".");
         }
     }
 

@@ -10,17 +10,9 @@ public class DiamondExercises {
         System.out.println("This is the output of the isosceles function.");
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < spaces; j++) {
-                System.out.print(" ");
-            }
-
-            for (int k = 0; k < stars; k++) {
-                System.out.print("*");
-            }
-
-            for (int m = 0; m < spaces; m++) {
-                System.out.print(" ");
-            }
+            printCharacter(" ", spaces);
+            printCharacter("*", spaces);
+            printCharacter(" ", spaces);
 
             spaces -= 1;
             stars += 2;
